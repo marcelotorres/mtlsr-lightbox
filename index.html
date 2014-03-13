@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Leve, simples e responsivo Lightbox com Jquery</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script src="mtlsr-lightbox.js"></script>
+	<!--CSS que precisa para o lightbox funcionar-->
+	<link rel="stylesheet" href="mtlsr-lightbox.css" />
+	
+	<!--CSS que eu coloquei apenas para melhorar apresentação-->
+	<style type="text/css">
+		*{font-family: "Arial", sans-serif;}
+		body{background-color:#f5f5f5}
+		
+		header{max-width:1000px;text-align:center;display:block;margin:30px auto}
+		header h1{color:#666;font-size:28px;font-weight:lighter}
+		
+		.mtlsr-images-for-lightbox{max-width:600px;margin:0 auto;overflow:hidden}
+		.mtlsr-images-for-lightbox ul li{float:left;display:inline;width:14%;margin:1%;padding:2%;background-color:#fff;border-top:2px solid #598dca}
+		.mtlsr-images-for-lightbox ul li a img{width:100%;height:auto;}
+
+		.mtlsr-lightbox{			
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+			background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%); /* IE10+ */
+			background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#b3000000',GradientType=1 ); /* IE6-8 */
+		}
+		.mtlsr-lightbox .image-in-lightbox{
+			border-radius:5px
+		}
+		
+		.close, .next, .prev{color:#666;font-size:30px;text-decoration:none;}
+		.next, .prev{color:#aaa;font-size:80px;}
+		.close:hover, .next:hover, .prev:hover{color:#fff;}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Leve, simples e responsivo Lightbox com Jquery</h1>
+	</header>
+	<div class="mtlsr-images-for-lightbox">
+		<ul>
+			<li>
+				<a href="images/medium/chrysanthemum.jpg">
+					<img src="images/thumbnail/chrysanthemum.jpg" alt="" />
+				</a>
+			</li>
+			<li>
+				<a href="images/medium/desert.jpg">
+					<img src="images/thumbnail/desert.jpg" alt="" />
+				</a>
+			</li>
+			<li>
+				<a href="images/medium/hydrangeas.jpg">
+					<img src="images/thumbnail/hydrangeas.jpg" alt="" />
+				</a>
+			</li>
+			<li>
+				<a href="images/medium/lighthouse.jpg">
+					<img src="images/thumbnail/lighthouse.jpg" alt="" />
+				</a>
+			</li>
+			<li>
+				<a href="images/medium/penguins.jpg">
+					<img src="images/thumbnail/penguins.jpg" alt="" />
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="mtlsr-lightbox">
+		<a href="#" class="close">&#9421;</a>
+		<a href="#" class="prev">&lsaquo;</a>
+		<a href="#" class="next">&rsaquo;</a>
+	</div>
+</body>
+
+</html>
